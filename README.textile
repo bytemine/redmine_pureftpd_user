@@ -33,6 +33,14 @@ MYSQLDefaultGID 1000
 MYSQLGetDir     SELECT "/ftp"
 </pre>
 
+Hint: Don't use your rails user to access the Redmine database.
+
+Create a pureftpd user who can only access the pureftpd_users table.
+
+<pre>
+GRANT SELECT ON your_redmine_database.pureftpd_users TO 'ftpuser'@'localhost' IDENTIFIED BY 'insertyourpassword';
+</pre>
+
 h2. Caveats
 
 Since it's not possible to decrypt Redmine's user passwords (which is good),
