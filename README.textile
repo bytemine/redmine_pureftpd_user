@@ -17,6 +17,22 @@ The plugin will transparently maintain the extra table.
 
 Just point pureftpd to the +pureftpd_users+ table.
 
+h2. Example pureftpd configuration
+
+Here's an example pureftpd-mysql.conf:
+
+<pre>
+MYSQLSocket     /var/lib/mysql/mysql.sock
+MYSQLUser       ftpuser
+MYSQLPassword   insertyourpassword
+MYSQLDatabase   your_redmine_database
+MYSQLCrypt      crypt
+MYSQLGetPW      SELECT password FROM pureftpd_users WHERE username="\L"
+MYSQLDefaultUID 1000
+MYSQLDefaultGID 1000
+MYSQLGetDir     SELECT "/ftp"
+</pre>
+
 h2. Caveats
 
 Since it's not possible to decrypt Redmine's user passwords (which is good),
