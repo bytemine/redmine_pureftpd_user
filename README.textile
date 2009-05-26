@@ -33,7 +33,7 @@ MYSQLDefaultGID 1000
 MYSQLGetDir     SELECT "/ftp"
 </pre>
 
-Hint: Don't use your rails user to access the Redmine database.
+*Hint:* Don't use your rails user to access the Redmine database.
 
 Create a pureftpd user who can only access the pureftpd_users table.
 
