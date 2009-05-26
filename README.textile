@@ -17,6 +17,13 @@ The plugin will transparently maintain the extra table.
 
 Just point pureftpd to the +pureftpd_users+ table.
 
+h2. Caveats
+
+Since it's not possible to decrypt Redmine's user passwords (which is good),
+it's not possible to create pureftpd users for existing user accounts.
+
+You have to change the user's password to create a pureftpd user.
+
 h2. Author
 
 Bernd Ahlers <ahlers@bytemine.net>
