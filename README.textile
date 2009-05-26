@@ -53,6 +53,10 @@ h2. TODO
 * Add tests!
 * Locked users shouldn't be able to login via ftp.
 
+h2. License
+
+See LICENSE file.
+
 h2. Author
 
 Bernd Ahlers <ahlers@bytemine.net>
