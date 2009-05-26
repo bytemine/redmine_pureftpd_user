@@ -1,4 +1,10 @@
 require 'redmine'
+require 'dispatcher'
+require 'pureftpd_user_patch'
+
+Dispatcher.to_prepare do
+  User.send(:include, ::Plugin::Pureftpd::User)
+end
 
 Redmine::Plugin.register :redmine_pureftpd_user do
   name 'Redmine Pureftpd User plugin'
