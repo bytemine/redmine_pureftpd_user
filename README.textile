@@ -48,6 +48,11 @@ it's not possible to create pureftpd users for existing user accounts.
 
 You have to change the user's password to create a pureftpd user.
 
+h2. TODO
+
+* Add tests!
+* Locked users shouldn't be able to login via ftp.
+
 h2. Author
 
 Bernd Ahlers <ahlers@bytemine.net>
