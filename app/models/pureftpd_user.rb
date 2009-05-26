@@ -1,6 +1,8 @@
 class PureftpdUser < ActiveRecord::Base
+  belongs_to :user
+
   def self.update_user(user)
-    puser = self.find_by_user(user.login) || self.new(:user => user.login)
+    puser = user.pureftpd_user || user.build_pureftpd_user(:username => user.login)
     puser.password = encrypt_password(user.password)
     puser.save
   end

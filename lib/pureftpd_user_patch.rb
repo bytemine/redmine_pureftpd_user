@@ -4,6 +4,7 @@ module Plugin
       def self.included(base)
         base.send(:include, InstanceMethods)
         base.class_eval do
+          has_one :pureftpd_user, :dependent => :destroy
           before_save :update_pureftpd_user
         end
       end
